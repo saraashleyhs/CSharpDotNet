@@ -32,7 +32,7 @@ namespace Gradebook
             int highestGrade;
             double averageGrade; //create variables for lowest, highest, and average
 
-            foreach (var key in Gradebook.Keys)
+            foreach (string key in Gradebook.Keys)
             {
                 Console.WriteLine($"Name: {key}");
                 Console.WriteLine($"Grades: {Gradebook[key]}");

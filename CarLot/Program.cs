@@ -37,15 +37,18 @@ namespace CarLot
     class CarLot
     {
         string Name { get; set; }
-        static List<Vehicle> Inventory = new List<Vehicle>();
+        List<Vehicle> Inventory;
+
         public CarLot(string name)
         {
             Name = name;
+            Inventory = new List<Vehicle>();
         }
         
     //CarLot should have methods to do the following actions:add a vehicle to the lot;print the inventory of the car lot, including number of vehicles and details about each vehicle
         public void AddVehicle(Vehicle vehicle) 
         {
+            
             Inventory.Add(vehicle);
         }
         public void PrintInventory()

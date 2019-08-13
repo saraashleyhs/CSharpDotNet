@@ -10,7 +10,7 @@ namespace Mastermind
         {
             var game = new MasterMind();
             game.Play();
-            Console.ReadLine();
+            //Console.ReadLine();
         }
 
     }
@@ -28,6 +28,7 @@ namespace Mastermind
             Random generator = new Random();
             // creates a number 0,1 or 2
             int index1 = generator.Next(0, 3);
+            Console.WriteLine();
             int index2 = generator.Next(0, 3);
             _color1 = colors[index1];
             _color2 = colors[index2];
@@ -42,8 +43,9 @@ namespace Mastermind
             //while guess isnt right and limit not reached
             while (guessLimit < 6)
             {
-                
+
                 //ask for guess
+                Console.WriteLine("I have chosen 2 of the following colors:  Red, Yellow, or Blue.");
                 Console.WriteLine("Write your guess with a space between.");
                 //check for guess
                 if (CheckGuess(Console.ReadLine().ToLower()))
@@ -103,6 +105,7 @@ namespace Mastermind
 
         }
         #endregion
+        //Constructor runs the init game method
         public MasterMind()
         {
             _initGame();

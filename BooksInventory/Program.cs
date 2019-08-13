@@ -1,4 +1,7 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore;
+using System.IO;
+using System.Linq;
 
 namespace BooksInventory
 {
@@ -6,7 +9,12 @@ namespace BooksInventory
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            CreateInventory inventory = new CreateInventory();
+            inventory.Create();
+            Console.WriteLine();
+            inventory.AlphaBooks();
         }
+
+
     }
 }

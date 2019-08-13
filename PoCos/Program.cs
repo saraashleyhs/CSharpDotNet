@@ -6,34 +6,44 @@ namespace PoCos
 {
     class MainClass
     {
-        Dictionary<string, List<ToDoItem>> FullToDoList = new Dictionary<string, List<ToDoItem>>();
-        public static List<ToDoItem> ToDoList = new List<ToDoItem>();
         public static void Main(string[] args)
         {
-            Console.WriteLine("Do you want to enter a To Do List Item?  If not, type 'done'");//initial question
 
-            while (Console.ReadLine().ToLower() != "done" )//if the user's answer is yes
+            ToDoMethod();
+            PoCos();
+
+        }
+        public static void ToDoMethod()
+        {
+            List<ToDoItem> ToDoList = new List<ToDoItem>();
+            Console.WriteLine("Do you want to enter a To Do List Item?  If not, type 'done'");//initial question
+            while (Console.ReadLine().ToLower() != "done")//if the user's answer is yes
             {
                 //use the user
-                
+
                 Console.WriteLine("Enter the description");
                 string userDescription = Console.ReadLine();
                 Console.WriteLine("Enter the due date");
                 string userDueDate = Console.ReadLine();
                 Console.WriteLine("Enter the Priority as high, normal, or low");
                 string userPriority = Console.ReadLine();
-                ToDoList.Add(new ToDoItem(userDescription, userDueDate, userPriority));                
+                ToDoList.Add(new ToDoItem(userDescription, userDueDate, userPriority));
+                Console.WriteLine("Do you want to enter a To Do List Item?  If not, type 'done'");
             }
 
             foreach (ToDoItem item in ToDoList)
             {
-                Console.WriteLine(item);
+                Console.WriteLine($"{item.Description} | {item.DueDate} | {item.Priority}");
             }
-
-
+            Console.WriteLine();
+        }
+        public static void PoCos()
+        {
+            DriversLicense BlankDL = new DriversLicense();
             DriversLicense DL1 = new DriversLicense("Sara", "Ashley", "Female", "12345678");
-            DL1.GetFullName();
+            Console.WriteLine(DL1.GetFullName());
             Book book1 = new Book();
+            Console.WriteLine(book1.Publisher);
             Airplane plane1 = new Airplane();
         }
     }
@@ -49,9 +59,7 @@ namespace PoCos
             DueDate = duedate;
             Priority = priority;
         }
-
-        
-                    
+          
     }
 
     class DriversLicense
@@ -95,11 +103,22 @@ namespace PoCos
         public Book()
         {
             Title = " ";
-            Authors = new List<string>();
+            Authors = new List<string>();//what would this look like when passing a parameter through from a user??
             Pages = 0;
             SKU = " ";
-            Publisher = " ";
+            Publisher = "unknown";
             Price = 0;
+        }
+
+        public Book(string title, List<string> list, int pages,string Sku, string publisher, decimal price)
+        {
+            Title = title;
+            Authors = list;
+            Pages = pages;
+            SKU = Sku;
+            Publisher = publisher;
+            Price = price;
+
         }
     }
 

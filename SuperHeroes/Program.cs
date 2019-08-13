@@ -42,16 +42,16 @@ namespace SuperHeroes
         }
         public void PrintPeople()
         {
-            foreach (var person in GetPeople)
+            foreach (Person person in GetPeople)
             {
-                //run PrintGreeting on the list?
+                //run PrintGreeting on the list
                 person.PrintGreeting();
             }
         }
     }
 
     //Create a Person class, that has the following fields - Name, NickName
-    class Person     //      Person
+    class Person
     {
         public virtual string Name { get; set; }
         public string NickName { get; set; }

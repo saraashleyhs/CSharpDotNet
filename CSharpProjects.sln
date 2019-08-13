@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksInventory", "BooksInve
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Students", "Students\Students.csproj", "{F3C3014C-787D-479A-A25B-14E799895B9C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoApp", "ToDoApp\ToDoApp.csproj", "{76BFC8FF-64A5-46E1-B6FC-E35574D4402E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -85,5 +87,9 @@ Global
 		{F3C3014C-787D-479A-A25B-14E799895B9C}.Debug|x86.Build.0 = Debug|Any CPU
 		{F3C3014C-787D-479A-A25B-14E799895B9C}.Release|x86.ActiveCfg = Release|Any CPU
 		{F3C3014C-787D-479A-A25B-14E799895B9C}.Release|x86.Build.0 = Release|Any CPU
+		{76BFC8FF-64A5-46E1-B6FC-E35574D4402E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{76BFC8FF-64A5-46E1-B6FC-E35574D4402E}.Debug|x86.Build.0 = Debug|Any CPU
+		{76BFC8FF-64A5-46E1-B6FC-E35574D4402E}.Release|x86.ActiveCfg = Release|Any CPU
+		{76BFC8FF-64A5-46E1-B6FC-E35574D4402E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
