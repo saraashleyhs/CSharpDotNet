@@ -8,7 +8,7 @@ namespace ToDoApp
     public class ItemRepository
     {
         ItemContext context;
-        //This is the place for all of the functions 
+        //This is the place for all of the functions that talk to the context(database).
         public ItemRepository()
         {
             context = new ItemContext();
