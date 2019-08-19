@@ -76,7 +76,7 @@ namespace Towers_of_Hanoi //with Dictionary
         }
         public static void PrintBoard()
         {
-            foreach(var key in towers.Keys) //Prints the board
+            foreach(string key in towers.Keys) //Prints the board
             {
                 Console.Write($"{key}: ");
                 PrintStack(towers[key]);

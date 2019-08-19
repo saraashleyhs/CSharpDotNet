@@ -31,7 +31,7 @@ namespace BooksInventory
                 // makes sure that the table exists, and creates it if it does not already exist
                 context.Database.EnsureCreated();
 
-                // ask the user for a student to add
+                // ask the user for a book to add
                 Console.WriteLine("Enter Book's Author");
                 String author = Console.ReadLine();
 
