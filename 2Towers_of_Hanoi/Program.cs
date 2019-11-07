@@ -87,6 +87,9 @@ namespace Towers_of_Hanoi //with Dictionary
 
         public static bool MoveLegal(string from, string to)//Check for illegal moves- can't put larger block on a smaller one
         { //Checks for empty stacks; cant move from an empty stack and when the 'to' stack is empty, we don't need to peek
+
+            //TODO Add validation for entering a valid stack.  i.e. can't enter V as an option
+
             if(towers[from].Count != 0 && (towers[to].Count == 0 || towers[from].Peek() < towers[to].Peek()))
             {
                 return true;
