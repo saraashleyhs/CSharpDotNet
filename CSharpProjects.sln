@@ -33,6 +33,7 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
 		Release|x86 = Release|x86
+		Debug|Any CPU = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{EDFC1388-A029-4065-9667-2F4BF0C5DCC2}.Debug|x86.ActiveCfg = Debug|x86
@@ -91,5 +92,21 @@ Global
 		{76BFC8FF-64A5-46E1-B6FC-E35574D4402E}.Debug|x86.Build.0 = Debug|Any CPU
 		{76BFC8FF-64A5-46E1-B6FC-E35574D4402E}.Release|x86.ActiveCfg = Release|Any CPU
 		{76BFC8FF-64A5-46E1-B6FC-E35574D4402E}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$0.TextStylePolicy = $2
+		$2.inheritsSet = null
+		$2.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $3
+		$3.scope = text/x-csharp
+		$0.TextStylePolicy = $4
+		$4.FileWidth = 80
+		$4.TabsToSpaces = True
+		$4.scope = text/plain
+		$0.StandardHeader = $5
+		$0.VersionControlPolicy = $6
 	EndGlobalSection
 EndGlobal
