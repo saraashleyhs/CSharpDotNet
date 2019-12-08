@@ -45,14 +45,19 @@ namespace ToDoApp
             string[] newItem = new string[3];
             Console.WriteLine("What is the description of the item?");
             newItem[0] = Console.ReadLine();
+
             Console.WriteLine("What is the status of the item?");
             newItem[1] = Console.ReadLine();
+
             //Console.WriteLine("What is the due date of the item?");
            // newItem[2] = Console.ReadLine();
 
             return newItem;
         }
-
+        public static void QuitProgram()
+        {
+            Console.WriteLine("You have now quit the program");
+        }
 
     }
 }

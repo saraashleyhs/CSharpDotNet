@@ -21,7 +21,7 @@ namespace ToDoApp
             //Display menu
             DisplayALL();
             string action = ConsoleUtils.DisplayMenu();
-            while (action != "Done")
+            while (action != "Exit")
             {
                 switch (action)
                 {
@@ -58,7 +58,7 @@ namespace ToDoApp
                         break;
                     case "Exit":
                         DisplayALL();
-                        Console.WriteLine("You have now quit the program");
+                        ConsoleUtils.QuitProgram();
                         break;
                     default:
                         Console.WriteLine("You have entered an invalid option. Please try again.");
