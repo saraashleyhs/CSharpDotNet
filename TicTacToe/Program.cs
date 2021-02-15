@@ -31,6 +31,7 @@ namespace TicTacToe
                 xPlayer = !xPlayer;
             }
         }
+
         #region Print the board
         public static void PrintBoard()
         {

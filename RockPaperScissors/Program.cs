@@ -15,15 +15,15 @@ namespace RockPaperScissors
                 Game();
 
             }
-            Console.WriteLine(compCounter);
-            Console.WriteLine(userCounter);
+            WriteLine(compCounter);
+            WriteLine(userCounter);
             if (userCounter > compCounter)
             {
-                Console.WriteLine("You have won the big prize!");
+                WriteLine("You have won the big prize!");
             }
             else
             {
-                Console.WriteLine("Sorry you lost to a computer!");
+                WriteLine("Sorry you lost to a computer!");
             }
         }
 

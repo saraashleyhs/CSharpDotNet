@@ -32,22 +32,22 @@ namespace Gradebook
             int highestGrade;
             double averageGrade; //create variables for lowest, highest, and average
 
-            foreach (string key in Gradebook.Keys)
+            foreach (string student in Gradebook.Keys)
             {
-                Console.WriteLine($"Name: {key}");
-                Console.WriteLine($"Grades: {Gradebook[key]}");
+                Console.WriteLine($"Name: {student}");
+                Console.WriteLine($"Grades: {Gradebook[student]}");
                 //Convert the single string representing the grades into an array or list of strings.
                 // To convert a grade from a String to an int, you can use Convert.ToInt32(String)
                 int[] SingleGrades;
-                SingleGrades = Array.ConvertAll<string, int>(Gradebook[key].Split(), Convert.ToInt32);
+                SingleGrades = Array.ConvertAll(Gradebook[student].Split(), Convert.ToInt32);
                 //Finding the lowest, highest and average
                 lowestGrade = SingleGrades.Min();
                 highestGrade = SingleGrades.Max();
                 averageGrade = SingleGrades.Average();
-                Console.WriteLine(key + " ");
-                Console.WriteLine(key + "'s lowest grade is: " + lowestGrade);
-                Console.WriteLine(key + "'s highest grade is: " + highestGrade);
-                Console.WriteLine(key + "'s average grade is: " + averageGrade);
+                Console.WriteLine(student + " ");
+                Console.WriteLine(student + "'s lowest grade is: " + lowestGrade);
+                Console.WriteLine(student + "'s highest grade is: " + highestGrade);
+                Console.WriteLine(student + "'s average grade is: " + averageGrade);
             }
         }
     }
