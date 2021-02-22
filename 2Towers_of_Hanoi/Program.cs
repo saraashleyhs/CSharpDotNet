@@ -18,10 +18,8 @@ namespace Towers_of_Hanoi //with Dictionary
 
         public void Play()
         {
-            ///TODO Add introduction
-
             //Printing the first board
-            InitBoard();
+            6
             //PLAYING THE GAME //
             //Check for a winner by using the count in the stack.....stackCount = 4.  While Stack B or Stack C isn't = 4.
             while (towers["C"].Count != 4)
@@ -91,14 +89,14 @@ namespace Towers_of_Hanoi //with Dictionary
         {
             int[] arrTower = stack.ToArray();
 
-            for (int j = arrTower.Length - 1; j >= 0; j--)
+            for (int j = arrTower.Length-1 ; j >= 0; j--)
             {
                 Console.Write(arrTower[j] + " ");
             }
 
         }
         public static void PrintBoard()
-        {
+        { 
             foreach (string key in towers.Keys) //Prints the board
             {
                 Console.Write($"{key}: ");
@@ -111,7 +109,7 @@ namespace Towers_of_Hanoi //with Dictionary
         public static bool MoveLegal(string from, string to)//Check for illegal moves- can't put larger block on a smaller one
         { //Checks for empty stacks; cant move from an empty stack and when the 'to' stack is empty, we don't need to peek
             string[] stacks = { "A", "B", "C" };
-            //TODO Add validation for entering a valid stack.  i.e. can't enter V as an option
+            //validation for entering a valid stack.  i.e. can't enter V as an option
             if (stacks.Contains(from) && stacks.Contains(to))
             {
                 if (towers[from].Count != 0 && (towers[to].Count == 0 || towers[from].Peek() < towers[to].Peek()))

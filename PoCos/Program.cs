@@ -93,12 +93,12 @@ namespace PoCos
 
     class Book
     {
-        public String Title { get; set; }
+        public string Title { get; set; }
         public List<string> Authors { get; set; }
         public int Pages { get; set; }
-        public String SKU { get; set; }
-        public String Publisher { get; set; }
-        public Decimal Price { get; set; }
+        public string SKU { get; set; }
+        public string Publisher { get; set; }
+        public decimal Price { get; set; }
 
         public Book()
         {
