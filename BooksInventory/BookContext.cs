@@ -18,7 +18,7 @@ namespace BooksInventory
             DirectoryInfo ProjectBase = ExecutionDirectory.Parent.Parent.Parent;
 
             // add 'students.db' to the project directory
-            String DatabaseFile = Path.Combine(ProjectBase.FullName, "books.db");
+            string DatabaseFile = Path.Combine(ProjectBase.FullName, "books.db");
 
             // to check what the path of the file is, uncomment the file below
             //Console.WriteLine("using database file :" + DatabaseFile);

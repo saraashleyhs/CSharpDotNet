@@ -31,6 +31,7 @@ namespace ToDoApp
             int itemID = int.Parse(userInput);
             return itemID;
         }
+
         public static void PrintAllItems(List<ToDoItem> list)
         {
             Console.Clear();
@@ -40,19 +41,20 @@ namespace ToDoApp
             }
 
         }
+
         public static string[] ItemUserInput()
         {
-            string[] newItem = new string[3];
+            string[] newItemInfo = new string[3];
             Console.WriteLine("What is the description of the item?");
-            newItem[0] = Console.ReadLine();
+            newItemInfo[0] = Console.ReadLine();
 
             Console.WriteLine("What is the status of the item?");
-            newItem[1] = Console.ReadLine();
+            newItemInfo[1] = Console.ReadLine();
 
             //Console.WriteLine("What is the due date of the item?");
            // newItem[2] = Console.ReadLine();
 
-            return newItem;
+            return newItemInfo;
         }
         public static void QuitProgram()
         {

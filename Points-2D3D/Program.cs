@@ -45,19 +45,34 @@ namespace Points2D3D
 
     public class Point2D
     {
+        public int X { get; set; }
+        public int Y { get; set; }  
 
         public Point2D()
         {
             // your code here
+            X = 0;
+            Y = 0;
         }
 
 
         public Point2D(int x, int y)
         {
-            // your code here  
+            // your code here
+            X = x;
+            Y = y;
         }
 
         // your code here
+        public override string ToString()
+        {
+            return $"({X} , {Y})";
+        }
+
+        public override bool Equals(object o)
+        {
+            return ;
+        }
 
     }
 

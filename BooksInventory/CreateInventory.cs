@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Collections.Generic;
 
+
 namespace BooksInventory
 {
     public class CreateInventory 
@@ -59,7 +60,6 @@ namespace BooksInventory
             Console.WriteLine();
             Console.WriteLine("The Current List of books are: ");
             // use a for each loop to loop through the students in the context
-            // notice how similar this is to looping through a list
             foreach (Book b in context.books)
             {
                 Console.WriteLine($"{b.Id} - {b.Title}, by {b.Author}");

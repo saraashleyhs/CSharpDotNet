@@ -5,32 +5,37 @@ namespace ToDoApp
 {
     public class App
     {
-        //will create a new "repo" and then run console utils functions on the repo?? 
+        //will create a new "repo" and ConsoleUtils functions will get the user input to pass to the methods on the repo object.
         ItemRepository repo;
+        
         public App()
         {
             repo = new ItemRepository();
         }
+
         private void DisplayALL()
         {
             List<ToDoItem> list = repo.GetAllItems();
             ConsoleUtils.PrintAllItems(list);
         }
+
         public void ProcessInput()
         {
             //Display menu
             DisplayALL();
-            string action = ConsoleUtils.DisplayMenu();
-            while (action != "Exit")
+            Console.WriteLine();
+            string AppAction = ConsoleUtils.DisplayMenu();
+
+            while (AppAction != "Exit")
             {
-                switch (action)
+                switch (AppAction)
                 {
                     case "List":
                         DisplayALL();
                         break;
                     case "Add":
-                        string[] newItem = ConsoleUtils.ItemUserInput();
-                        repo.AddItem(newItem[0], newItem[1]);//DateTime.Parse(newItem[2])
+                        string[] newItemInfo = ConsoleUtils.ItemUserInput();
+                        repo.AddItem(newItemInfo[0], newItemInfo[1]);//DateTime.Parse(newItem[2])
                         DisplayALL();
                         break;
                     case "Delete":
@@ -42,17 +47,17 @@ namespace ToDoApp
                         break;
                     case "Update":
                         itemID = ConsoleUtils.GetItemID();
-                        string[] updatedItem = ConsoleUtils.ItemUserInput();
-                        repo.UpdateItem(itemID, updatedItem[0], updatedItem[1]);//, DateTime.Parse(updatedItem[2])
+                        string[] updatedItemInfo = ConsoleUtils.ItemUserInput();
+                        repo.UpdateItem(itemID, updatedItemInfo[0], updatedItemInfo[1]);//, DateTime.Parse(updatedItem[2])
                         DisplayALL();
                         break;
                     case "Pending":
-                        repo.GetPendingItems();
+                        ConsoleUtils.PrintAllItems(repo.GetPendingItems());
                         Console.WriteLine();
                         DisplayALL();
                         break;
                     case "Done":
-                        repo.GetDoneItems();
+                        ConsoleUtils.PrintAllItems(repo.GetPendingItems());
                         Console.WriteLine();
                         DisplayALL();
                         break;
@@ -64,7 +69,7 @@ namespace ToDoApp
                         Console.WriteLine("You have entered an invalid option. Please try again.");
                         break;
                 }
-                action = ConsoleUtils.DisplayMenu();
+                AppAction = ConsoleUtils.DisplayMenu();
             }
         }
     }
